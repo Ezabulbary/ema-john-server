@@ -37,7 +37,7 @@ async function run() {
         app.get('/productCount', async(req, res) =>{
             const count = await productCollection.estimatedDocumentCount();
             res.send({count});
-        })
+        });
 
         // use post to get products by ids 
         app.post('/productByKeys', async(req, res) => {
